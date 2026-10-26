@@ -451,7 +451,7 @@ async def weather(location: str):
 @app.post("/api/assistant")
 async def assistant(data: ChatIn):
     key = os.getenv("GEMINI_API_KEY", "").strip()
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
     if not key:
         answer = (
             "AI is not configured yet. Add GEMINI_API_KEY to the .env file and restart the server. "
